@@ -38,6 +38,8 @@ An example detection can be seen in this image:
 I then used the output `objpoints` and `imgpoints` to compute the camera calibration and distortion coefficients using the `cv2.calibrateCamera()` function.  I applied this distortion correction to the test images using the `cv2.undistort()` function and obtained this result: 
 
 ![Undistorted image][image2]
+
+Original image:
 ![Original image][image3]
 
 ### Pipeline (single images)
