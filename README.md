@@ -18,9 +18,8 @@ The goals / steps of this project are the following:
 [image3]: ./test_images/test2.jpg "Original Road"
 [image4]: ./output_images/binary_test2.jpg "Binary Example"
 [image5]: ./output_images/warped_test2.jpg "Warp Example"
-[image6]: ./output_images/test2.jpg "Detected Road"
-[image7]: ./output_images/color_fit_lines.jpg "Fit Visual"
-[image8]: ./examples/example_output.jpg "Output"
+[image6]: ./output_images/fit_test2.jpg "Warp Example"
+[image7]: ./output_images/test2.jpg "Detected Road"
 [video1]: ./project_video.mp4 "Video"
 
 ---
@@ -94,7 +93,7 @@ Once pixels for each lane line have been detected, we just make a `np.polyfit` c
 
 In the beginning, I actually used a single line by translating the points to the center of the image as a simplification. This worked perfectly on the project video and would allow the system to compensate for faulty lines on the left or the right. However, I realized that this would cause problems with turns of any significance, since it would be a simple x translation to line up the lane lines. I suspec that this approach could still work by applying a transformation to uncurve each lane line, then shifting them to the center. However, I decided to revert to tracking each line separately for simplicity.
 
-![Warped Fit][image5]
+![Warped Fit][image6]
 
 #### 4. Calculating the radius of curvature of the lane and the position of the vehicle with respect to center.
 
@@ -106,7 +105,7 @@ The center of the vehicle was assumed to be the center of the camera. As a resul
 
 Combining all the previous steps, plotting the detected area, unwarping the lane detection images and printing the curvature and distance to center results in an image like the following:
 
-![Fit Image][image6]
+![Fit Image][image7]
 
 ---
 
